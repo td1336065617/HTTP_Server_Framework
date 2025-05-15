@@ -29,6 +29,7 @@ namespace Epoll_server {
             headers = curl_slist_append(headers, "Accept: */*");
             headers = curl_slist_append(headers, "Host: ac.nowcoder.com");
             headers = curl_slist_append(headers, "Connection: keep-alive");
+            headers = curl_slist_append(headers, ("cookie: "+cookie).c_str());
             curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers);
             //curl_easy_perform(curl);
             curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, WriteCallback);
@@ -60,6 +61,7 @@ namespace Epoll_server {
             headers = curl_slist_append(headers, "Accept: */*");
             headers = curl_slist_append(headers, ("Host: "+url).c_str());
             headers = curl_slist_append(headers, "Connection: keep-alive");
+            headers = curl_slist_append(headers, ("cookie: "+cookie).c_str());
             headers = curl_slist_append(headers, Content_Length.c_str());
             headers = curl_slist_append(headers, Content_Type.c_str());
             curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers);
