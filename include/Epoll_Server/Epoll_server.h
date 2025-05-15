@@ -19,7 +19,7 @@ namespace Epoll_server {
         void set_server(string ip, int post);//请先设置服务器参数  函数体在server.cpp
         void start_server(); // 函数体在server.cpp
         void setBootServerUrl(const string &bootServerUrl);
-    private:
+    protected:
         unordered_map<string, string> HTTP_Content_type_dictionary;         //这个哈希表记录了文件与其对于的响应头Content_type
         string The_default_directory;                                      // web目录
         string GMT_time_data_format = "%a, %d %b %Y %H:%M:%S %Z";          // GMT时间转换的模板
