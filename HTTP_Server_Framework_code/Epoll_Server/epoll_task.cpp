@@ -56,6 +56,7 @@ namespace Epoll_server {
         HTTP_response_data httpResponseData;
         HTTP_syn_response(httpRequestData,httpResponseData);
         //cout<<httpResponseData<<endl;
+        cout<<"Task_distribution_center 执行之前"<<endl;
         Task_distribution_center(httpRequestData,httpResponseData);//任务处理。
         
         string re_mess;
