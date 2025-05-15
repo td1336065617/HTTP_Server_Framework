@@ -14,7 +14,6 @@ add_library(HTTP_Server_Framework SHARED HTTP_Server_Framework.h
         Epoll_Server/epoll_task_Bread.cpp
         Epoll_Server/HTTP_syn_response.cpp
         Epoll_Server/server.cpp
-        Epoll_Server/Task_distribution_center.cpp
         HTTP_Analysis/Data_spliti.cpp
         HTTP_Analysis/HTTP_Analysis.cpp
         HTTP_Analysis/HTTP_Analysis.h
