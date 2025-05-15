@@ -38,5 +38,5 @@ add_library(HTTP_Server_Framework SHARED HTTP_Server_Framework.h
         Time_data/Time_data.h
         xt_heard/xt_heard.h
         HTTP_Server_Framework.h
-        Epoll_request/set_cookie.cpp)
+)
 target_link_libraries(HTTP_Server_Framework /lib/x86_64-linux-gnu/libcrypto++.a ${CMAKE_SOURCE_DIR}/lib/libws2_32.a -lmysqlclient -lcurl)

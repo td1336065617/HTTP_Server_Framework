@@ -11,7 +11,7 @@ namespace Epoll_server {
         return size * nmemb;
     }
 
-    std::string Epoll_request::get_url(std::string url) {
+    std::string Epoll_request::get_url(std::string url,std::string cookie) {
 
         std::string mess;
         CURL *curl;
@@ -40,7 +40,7 @@ namespace Epoll_server {
         return mess;
     }
 
-    std::string Epoll_request::post_url(std::string url, std::string post_str) {
+    std::string Epoll_request::post_url(std::string url, std::string post_str,std::string cookie) {
         std::string mess;
         CURL *curl;
         CURLcode res;
