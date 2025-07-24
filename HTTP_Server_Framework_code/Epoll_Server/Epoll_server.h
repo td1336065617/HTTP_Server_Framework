@@ -47,7 +47,7 @@ namespace Epoll_server {
         void epoll_task_Bread();
         //返回机制需要更改
         int epoll_response(int clientbj,HTTP_response_data httpResponseData);//根据请求数据进行响应。实际上是对go-cqhttp http发出请求
-        virtual int Task_distribution_center(HTTP_request_data httpRequestData, HTTP_response_data &httpResponseData);//如果需要对HTTP请求的数据进行处理，继承后重写任务分配中心
+        virtual int Task_distribution_center(HTTP_request_data httpRequestData, HTTP_response_data &httpResponseData)=0;//如果需要对HTTP请求的数据进行处理，继承后重写任务分配中心
     };
 
 } // Epoll_server
